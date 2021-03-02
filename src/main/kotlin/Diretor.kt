@@ -2,11 +2,11 @@ class Diretor(nome: String,
               cpf: String,
               salario: Double,
               val senha: String,
-              val plr: String) : Funcionario(nome, cpf, salario) {
+              val plr: Double) : Funcionario(nome, cpf, salario) {
 
     override val bonificacao: Double
         get() {
-            return this.salario * 0.3;
+            return super.bonificacao + salario + plr;
         }
 
 }
