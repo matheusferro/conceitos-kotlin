@@ -1,5 +1,6 @@
 fun main(args: Array<String>) {
-    var contaJose = Conta("José", "10")
+    //POSSIVEL DEFINIR LABELS - Para qualquer parametro em construtores e funções.
+    var contaJose = Conta(titular = "José", numero = "10")
     contaJose.deposito(100.0)
     contaJose.saque(10.0)
     println(contaJose.saldo)
@@ -23,18 +24,21 @@ fun main(args: Array<String>) {
 
 /**
  * Utilizando construtor primário.
+ *
+ * Possivel definir valor inicial para variaveis
+ * EX: val numero: String = "0"
  */
-class Conta(var titular: String, var numero: String) {
+class Conta(val titular: String, val numero: String) {
     var saldo: Double = 0.0
         private set
 
     /**
      * Construtor secundário
 
-        constructor(titular: String, numero: String) : this() {
-            this.titular = titular
-            this.numero = numero
-        }
+    constructor(titular: String, numero: String) : this() {
+    this.titular = titular
+    this.numero = numero
+    }
      */
     /**
      * GETTERS E SETTERS PODEM SER UTILIZADOS COMO PROPERTUIES
