@@ -1,12 +1,11 @@
 fun main(args: Array<String>) {
-    var contaJose = Conta()
-    contaJose.titular = "José"
+    var contaJose = Conta("José", "10")
     contaJose.deposito(100.0)
     contaJose.saque(10.0)
     println(contaJose.saldo)
     //mostrarConta(contaJose)
 
-    var contaJoao = Conta()
+    var contaJoao = Conta("João", "20")
     contaJoao.deposito(20.0)
     contaJoao.deposito(5.0)
     println(contaJoao.saldo)
@@ -22,12 +21,21 @@ fun main(args: Array<String>) {
     println("Saldo ${contaJoao.titular}: ${contaJoao.saldo}")
 }
 
-class Conta() {
-    var titular: String = "João"
-    var numero: String = "11120222"
+/**
+ * Utilizando construtor primário.
+ */
+class Conta(var titular: String, var numero: String) {
     var saldo: Double = 0.0
         private set
 
+    /**
+     * Construtor secundário
+
+        constructor(titular: String, numero: String) : this() {
+            this.titular = titular
+            this.numero = numero
+        }
+     */
     /**
      * GETTERS E SETTERS PODEM SER UTILIZADOS COMO PROPERTUIES
      *
