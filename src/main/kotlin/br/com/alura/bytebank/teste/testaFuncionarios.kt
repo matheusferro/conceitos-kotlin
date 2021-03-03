@@ -1,10 +1,10 @@
-import modelo.CalculadoraBonificacao
-import modelo.Diretor
-import modelo.Gerente
+import br.com.alura.bytebank.modelo.CalculadoraBonificacao
+import br.com.alura.bytebank.modelo.Diretor
+import br.com.alura.bytebank.modelo.Gerente
 
 fun testaFuncionarios() {
     /**
-     * Alterado classe modelo.Funcionario para abstrata
+     * Alterado classe br.com.alura.bytebank.modelo.Funcionario para abstrata
      * Como 'funcionario' não é uma entidade concreta, utilizamos só  gerente,
      * diretor e etc...
      */

@@ -1,4 +1,4 @@
-package modelo
+package br.com.alura.bytebank.modelo
 
 /**
  * Utilizando construtor primário.
@@ -22,7 +22,7 @@ abstract class Conta(val titular: String, val numero: String) {
      * GETTERS E SETTERS PODEM SER UTILIZADOS COMO PROPERTUIES
      *
      *  EX:
-     *      var teste = "teste"
+     *      var br.com.alura.bytebank.teste = "br.com.alura.bytebank.teste"
      *          set(value: String){
      *              if(value){
      *                  field = value
