@@ -6,7 +6,10 @@ package br.com.alura.bytebank.modelo
  * Possivel definir valor inicial para variaveis
  * EX: val numero: String = "0"
  */
-abstract class Conta(val titular: String, val numero: String) {
+abstract class Conta(
+    val titular: Cliente,
+    val numero: String
+) {
     var saldo: Double = 0.0
         protected set
 

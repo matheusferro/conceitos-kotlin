@@ -1,11 +1,11 @@
 import java.lang.String as StringJava
 
 fun main() {
-//    println("Bem vindo ao bytebank")
-//    gerenciarConta()
-//    testaFuncionarios()
-//    testaContaDiferente()
-//    testaAutenticacao()
+    println("Bem vindo ao bytebank")
+    gerenciarConta()
+    testaFuncionarios()
+    testaContaDiferente()
+    testaAutenticacao()
 
     val palavra: String = ""
     //Utilizando String da biblioteca java

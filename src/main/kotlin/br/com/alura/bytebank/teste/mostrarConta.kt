@@ -12,7 +12,7 @@ fun mostrarConta(conta: Conta) {
      *
      * 1-FOR:
      */
-    val titular: String = conta.titular
+    val titular: String = conta.titular.nome
     val numeroConta: String = conta.numero
     var saldo: Double = conta.saldo
     for (i in -1..3) {//RANGES. POSSIVEL USAR O "downTo" , step, until,
