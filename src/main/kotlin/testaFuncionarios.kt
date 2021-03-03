@@ -8,6 +8,7 @@ fun testaFuncionarios() {
         nome = "Alex",
         cpf = "111.111.111-11",
         salario = 1000.0,
+        senha = "senhaForte"
     )
 
     println("nome: ${funcionario.nome}")
@@ -33,7 +34,7 @@ fun testaFuncionarios() {
         cpf = "222.222.222-22",
         salario = 2000.0,
         senha = "1234",
-        plr = 100.0
+        plr = 100.0,
     )
     println("nome: ${diretor.nome}")
     println("cpf: ${diretor.cpf}")
