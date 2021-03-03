@@ -4,9 +4,9 @@
  * Possivel definir valor inicial para variaveis
  * EX: val numero: String = "0"
  */
-open class Conta(val titular: String, val numero: String) {
+abstract class Conta(val titular: String, val numero: String) {
     var saldo: Double = 0.0
-        private set
+        protected set
 
     /**
      * Construtor secundário
@@ -33,11 +33,7 @@ open class Conta(val titular: String, val numero: String) {
         this.saldo += valor
     }
 
-    open fun saque(valor: Double) {
-        if (this.saldo >= valor) {
-            this.saldo -= valor
-        }
-    }
+    abstract fun saque(valor: Double)
 
     fun transfere(valor: Double, destino: Conta): Boolean {
         if (this.saldo >= valor) {
