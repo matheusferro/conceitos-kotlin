@@ -6,12 +6,22 @@ package br.com.alura.bytebank.modelo
  * Possivel definir valor inicial para variaveis
  * EX: val numero: String = "0"
  */
+
+//Definindo Variavel global
+var totalContas = 0
+    private set
+
 abstract class Conta(
     val titular: Cliente,
     val numero: String
 ) {
     var saldo: Double = 0.0
         protected set
+
+    //BLOCO EXECUTADO TODA VEZ QUE A CLASSE É INSTANCIADA
+    init{
+        totalContas++
+    }
 
     /**
      * Construtor secundário
