@@ -1,5 +1,10 @@
 fun testaFuncionarios() {
-    val funcionario = Funcionario(
+    /**
+     * Alterado classe Funcionario para abstrata
+     * Como 'funcionario' não é uma entidade concreta, utilizamos só  gerente,
+     * diretor e etc...
+     */
+    val funcionario = Gerente(
         nome = "Alex",
         cpf = "111.111.111-11",
         salario = 1000.0,
