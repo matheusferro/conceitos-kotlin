@@ -7,10 +7,6 @@ package br.com.alura.bytebank.modelo
  * EX: val numero: String = "0"
  */
 
-//Definindo Variavel global
-var totalContas = 0
-    private set
-
 abstract class Conta(
     val titular: Cliente,
     val numero: String
@@ -18,6 +14,20 @@ abstract class Conta(
     var saldo: Double = 0.0
         protected set
 
+    /**
+     * Definindo um COMPANION OBJECT.
+     * COMPANION    -> Permite compartilhar o objeto com a classe
+     * OBJECT       -> DEFINE UM OBJETO COM O NOME 'CONTADOR'
+     *
+     * Esse objeto substituiu a variavel global, pois com ele tinhamos varias falhas
+     * com outras classes podendo realizar a modificação. Agora somente a classe Conta
+     * manipula o valor do objeto e todas as outras classes conseguem acessar por meio
+     * de: Conta.totalContas.
+     */
+    companion object Contador{
+        var totalContas = 0
+            private set
+    }
     //BLOCO EXECUTADO TODA VEZ QUE A CLASSE É INSTANCIADA
     init{
         totalContas++

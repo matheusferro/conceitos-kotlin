@@ -1,4 +1,4 @@
-import br.com.alura.bytebank.modelo.totalContas
+import br.com.alura.bytebank.modelo.Conta
 import java.lang.String as StringJava
 
 fun main() {
@@ -8,7 +8,7 @@ fun main() {
     testaContaDiferente()
     testaAutenticacao()
 
-    println("Temos $totalContas contas.")
+    println("Temos ${Conta.totalContas} contas.")
     val palavra: String = ""
     //Utilizando String da biblioteca java
     val palavraJava: java.lang.String = java.lang.String("")//nome completo
