@@ -1,3 +1,5 @@
+import modelo.Conta
+
 fun mostrarConta(conta: Conta) {
     /**
      * Toda variável deve ser iniciada.

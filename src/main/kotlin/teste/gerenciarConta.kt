@@ -1,3 +1,6 @@
+import modelo.ContaCorrente
+import modelo.ContaPoupanca
+
 fun gerenciarConta() {
     //POSSIVEL DEFINIR LABELS - Para qualquer parametro em construtores e funções.
     var contaJose = ContaPoupanca(titular = "José", numero = "10")

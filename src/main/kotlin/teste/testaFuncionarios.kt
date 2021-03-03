@@ -1,6 +1,10 @@
+import modelo.CalculadoraBonificacao
+import modelo.Diretor
+import modelo.Gerente
+
 fun testaFuncionarios() {
     /**
-     * Alterado classe Funcionario para abstrata
+     * Alterado classe modelo.Funcionario para abstrata
      * Como 'funcionario' não é uma entidade concreta, utilizamos só  gerente,
      * diretor e etc...
      */

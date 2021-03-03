@@ -1,3 +1,5 @@
+package modelo
+
 /**
  * Utilizando construtor primário.
  *
@@ -35,12 +37,4 @@ abstract class Conta(val titular: String, val numero: String) {
 
     abstract fun saque(valor: Double)
 
-    fun transfere(valor: Double, destino: Conta): Boolean {
-        if (this.saldo >= valor) {
-            this.saque(valor)
-            destino.deposito(valor)
-            return true
-        }
-        return false
-    }
 }
