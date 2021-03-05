@@ -17,15 +17,33 @@ fun main() {
 //    val palavraJava2: StringJava = StringJava("")// utilizando apelido para o pacote, definido com o 'as'
 //
 
+    testeNulls()
+}
+
+fun testeNulls() {
     /**
      * Lidando com null
-     */
-    var enderecoNull: Endereco? = null
-
-    /**
+     *
      * Não conseguimos acessar os membros de objetos que podem ser
      * nullos, então "transformamos" o objeto para não nulo com: !!
+     *
+     * var enderecoNaoNull: Endereco = endereco!!
      */
-    var enderecoNaoNull: Endereco = enderecoNull!!
-    println(enderecoNaoNull.bairro);
+    var endereco: Endereco? = null
+
+    /**
+     * Safe call
+     */
+    //Verifica se o objeto esta null para realizar a chamada
+    println(endereco?.logradouro);
+
+    //Variaveis de ambiente
+    endereco?.let {
+        println(it.logradouro)
+    }
+
+    //Variaveis de ambiente
+    endereco?.let { end: Endereco ->
+        println(end.logradouro)
+    }
 }
