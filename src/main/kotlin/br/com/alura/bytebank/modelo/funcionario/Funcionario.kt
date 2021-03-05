@@ -1,4 +1,4 @@
-package br.com.alura.bytebank.modelo
+package br.com.alura.bytebank.modelo.funcionario
 
 abstract class Funcionario(
     val nome: String,

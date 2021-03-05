@@ -1,6 +1,6 @@
 import br.com.alura.bytebank.modelo.Cliente
-import br.com.alura.bytebank.modelo.ContaCorrente
-import br.com.alura.bytebank.modelo.ContaPoupanca
+import br.com.alura.bytebank.modelo.conta.ContaCorrente
+import br.com.alura.bytebank.modelo.conta.ContaPoupanca
 
 fun testaContaDiferente() {
     var clienteLucas = Cliente(

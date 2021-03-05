@@ -1,8 +1,8 @@
-package br.com.alura.bytebank.teste
+package br.com.alura.bytebank.funcoes
 
 import br.com.alura.bytebank.exceptions.SaldoInsuficienteException
 
-fun main() {
+fun exceptions() {
     println("início main")
     funcao1()
 

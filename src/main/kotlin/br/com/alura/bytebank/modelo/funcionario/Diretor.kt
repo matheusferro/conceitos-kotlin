@@ -1,4 +1,6 @@
-package br.com.alura.bytebank.modelo
+package br.com.alura.bytebank.modelo.funcionario
+
+import br.com.alura.bytebank.modelo.funcionario.FuncionarioAdmin
 
 class Diretor(nome: String,
               cpf: String,

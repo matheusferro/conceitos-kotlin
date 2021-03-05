@@ -1,4 +1,6 @@
-package br.com.alura.bytebank.modelo
+package br.com.alura.bytebank.modelo.conta
+
+import br.com.alura.bytebank.modelo.Cliente
 
 class ContaSalario(
     titular: Cliente,

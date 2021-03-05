@@ -1,13 +1,18 @@
-package br.com.alura.bytebank.modelo
+package br.com.alura.bytebank.modelo.conta
 
-class ContaPoupanca(
+import br.com.alura.bytebank.modelo.interfaces.Transferencia
+import br.com.alura.bytebank.modelo.Cliente
+
+class ContaCorrente(
     titular: Cliente,
     numero: String
+
 ) : Conta(titular = titular, numero = numero), Transferencia {
 
     override fun saque(valor: Double) {
+        val valorComTaxa = valor + 0.1
         if (this.saldo >= valor) {
-            this.saldo -= valor;
+            this.saldo -= valorComTaxa;
         }
     }
 
@@ -19,5 +24,4 @@ class ContaPoupanca(
         }
         return false
     }
-
 }

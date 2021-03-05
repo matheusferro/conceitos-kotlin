@@ -1,4 +1,4 @@
-package br.com.alura.bytebank.modelo
+package br.com.alura.bytebank.modelo.interfaces
 
 interface Autenticavel {
     fun autentica(senha: String): Boolean

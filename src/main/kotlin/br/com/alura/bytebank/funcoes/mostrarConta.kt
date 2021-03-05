@@ -1,4 +1,4 @@
-import br.com.alura.bytebank.modelo.Conta
+import br.com.alura.bytebank.modelo.conta.Conta
 
 fun mostrarConta(conta: Conta) {
     /**

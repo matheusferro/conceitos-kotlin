@@ -1,4 +1,4 @@
-package br.com.alura.bytebank.teste
+package br.com.alura.bytebank.funcoes
 
 import br.com.alura.bytebank.modelo.Endereco
 
