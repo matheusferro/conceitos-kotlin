@@ -1,5 +1,7 @@
 package br.com.alura.bytebank.teste
 
+import br.com.alura.bytebank.exceptions.SaldoInsuficienteException
+
 fun main() {
     println("início main")
     funcao1()
@@ -32,6 +34,8 @@ fun funcao1() {
     } catch (expEspecifica: ArithmeticException) {
         println(" Ocorreu um erro: ArithmeticException. ")
         expEspecifica.printStackTrace()
+    } catch (expSaldo: SaldoInsuficienteException) {
+        println(" Ocorreu um erro: SaldoInsuficienteException. ")
     } catch (expGeral: Exception) {
         println(" Ocorreu um erro desconhecido. ")
         expGeral.printStackTrace()
@@ -43,7 +47,7 @@ fun funcao2() {
     println("início funcao2")
     for (i in 1..5) {
         println(i)
-        i / 0
+        throw SaldoInsuficienteException()
     }
     println("fim funcao2")
 }
