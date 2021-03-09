@@ -5,7 +5,18 @@ import br.com.alura.bytebank.modelo.interfaces.Autenticavel
 
 
 fun highOrderFunction() {
-    soma(107, 2, resultado = (::println))
+    soma(107, 2, resultado = {
+        //Aqui temos o uso do it
+        println(it)
+    })
+    /**
+     * Com reciver vamos ver alterações ao passar uma função lambda
+     */
+    somaReceiver(107, 2, resultado = {
+        //Aqui temos o uso do this
+        println(this)
+
+    })
 
     val autenticavel = object : Autenticavel {
         val senha: String = "senhaSegura"
@@ -19,5 +30,12 @@ fun highOrderFunction() {
 fun soma(v1: Int, v2: Int, resultado: (Int) -> Unit) {
     println("Iniciando a soma")
     resultado(v1 + v2)
+    println("Fechando a soma")
+}
+
+fun somaReceiver(v1: Int, v2: Int, resultado: Int.() -> Unit) {
+    println("Iniciando a soma")
+    val total = v1 + v2
+    total.resultado()
     println("Fechando a soma")
 }
