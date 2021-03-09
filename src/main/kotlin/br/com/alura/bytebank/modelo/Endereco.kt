@@ -1,12 +1,12 @@
 package br.com.alura.bytebank.modelo
 
 class Endereco(
-    val logradouro: String = "",
-    val numero: String = "",
-    val bairro: String = "",
-    val cidade: String = "",
-    val estado: String = "",
-    val cep: String = "",
+    var logradouro: String = "",
+    var numero: String = "",
+    var bairro: String = "",
+    var cidade: String = "",
+    var estado: String = "",
+    var cep: String = "",
     val complemento: String = ""
 ) {
 
@@ -47,6 +47,13 @@ class Endereco(
         result = 31 * result + cep.hashCode()
         result = 31 * result + complemento.hashCode()
         return result
+    }
+
+    fun formatar(): String {
+        return """
+            $logradouro , $numero - $cidade - $estado - $cep
+            $complemento
+        """.trimIndent()
     }
 
 
