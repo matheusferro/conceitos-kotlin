@@ -37,4 +37,13 @@ fun main() {
         return@lambda salario + 500.0
     }
     println(calculaBonificacao(3000.0))
+
+    //Implementação com função anonima
+    val calculaBonificacaoAnonima: (salario: Double) -> Double = fun(salario: Double):Double{
+        if(salario > 2000.0){
+            return salario + 100.0
+        }
+        return salario + 500.0
+    }
+    println(calculaBonificacaoAnonima(3000.0))
 }
